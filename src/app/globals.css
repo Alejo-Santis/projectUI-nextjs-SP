@@ -12,6 +12,13 @@ li {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: #20415b;
+}
+
 @media (width <= 900px) {
   .filter {
     width: 100%;

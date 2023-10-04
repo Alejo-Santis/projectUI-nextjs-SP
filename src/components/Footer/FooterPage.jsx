@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import TagIcon from "@mui/icons-material/Tag";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,14 +24,28 @@ const FooterPage = () => {
         xs: "column",
       }}
     >
-      <Box sx={{ display: "flex" }}>
+      <Box
+        sx={{ display: "flex" }}
+        flexDirection={{
+          xs: "column",
+          sm: "row",
+          md: "row",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
             flexGrow: 1,
-            justifyContent: "flex-start",
             alignItems: "center",
             gap: "1rem",
+          }}
+          justifyContent={{
+            xs: "center",
+            md: "flex-start",
+          }}
+          flexDirection={{
+            xs: "column",
+            md: "row",
           }}
         >
           <Link href="/">
@@ -41,36 +56,42 @@ const FooterPage = () => {
               height={50}
             />
           </Link>
-          <Typography
-            variant="body1"
-            fontWeight="bold"
-          >
-            Follow Us
-          </Typography>
-          <IconButton
-            color="info"
-            href="https://www.facebook.com/pg/busmiamiorlando"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="primary"
-            href="https://twitter.com/Supertours_Orl?lang=es"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="error"
-            href="https://www.instagram.com/supertours/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon />
-          </IconButton>
+          <Box>
+            <Typography
+              variant="h6"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              gap="1rem"
+            >
+              <TagIcon />
+              Follow Us
+            </Typography>
+            <IconButton
+              color="info"
+              href="https://www.facebook.com/pg/busmiamiorlando"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
+              color="primary"
+              href="https://twitter.com/Supertours_Orl?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </IconButton>
+            <IconButton
+              color="error"
+              href="https://www.instagram.com/supertours/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </IconButton>
+          </Box>
         </Box>
         <Box>
           <Typography
@@ -95,7 +116,16 @@ const FooterPage = () => {
                 gap: "1rem",
               }}
             >
-              <ContactPhoneIcon />
+              <Typography
+                variant="h6"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                gap="1rem"
+              >
+                <ContactPhoneIcon />
+                Contact
+              </Typography>
               <Typography fontSize={12}>Orlando (407) 370 3001</Typography>
               <Typography fontSize={12}>Miami (305) 677 2676</Typography>
               <a
@@ -114,7 +144,6 @@ const FooterPage = () => {
                 reservations@supertours.com
               </a>
             </Box>
-            <Box></Box>
           </Typography>
         </Box>
       </Box>

@@ -166,4 +166,102 @@
     </Card>
   </Grid>
 </Grid>; */
+
+  {
+    /* Hero section first config  */
+  }
+  // <Paper
+  //   sx={{
+  //     height: {
+  //       xs: "50vh",
+  //       md: "70vh",
+  //     },
+  //     backgroundImage: "url(/img/imageHero.jpg)",
+  //     backgroundSize: "contain",
+  //     backgroundRepeat: "no-repeat",
+  //     backgroundPosition: "left",
+  //     opacity: "0.8",
+  //   }}
+  // >
+  //   {/* <Container>
+  //     <Grid
+  //       container
+  //       justifyContent="center"
+  //       alignItems="center"
+  //       sx={{
+  //         height: "100%",
+  //         width: "0 auto",
+  //         paddingTop: "4rem",
+  //       }}
+  //     >
+  //       <img
+  //         style={{
+  //           alignSelf: "center",
+  //           width: "60%",
+  //           height: "100",
+  //         }}
+  //         src="/img/logo.png"
+  //         alt="logo"
+  //       />
+  //     </Grid>
+  //   </Container> */}
+  // </Paper>
+}
+
+{
+  /* Hero section second config  */
+}
+{
+  /* <Grid
+      container
+      spacing={2}
+      m={4}
+    >
+      <Grid
+        item
+        xs={12}
+        sm={8}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        margin="0 auto"
+      >
+        <Typography
+          variant="h2"
+          component="h1"
+          fontWeight={{
+            xs: "400",
+            sm: "700",
+          }}
+          lineHeight="1.5em"
+          textAlign="center"
+        >
+          Where would you like to go?
+          <Typography
+            variant="subtitle1"
+            align="justify"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+            eaque quo. Placeat iste quam dolores modi quis distinctio rem
+            obcaecati sapiente dicta quia sequi voluptate iusto, voluptatem,
+            nostrum culpa vero.
+          </Typography>
+        </Typography>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        sm={8}
+      >
+        <Image
+          src="/img/hero.svg"
+          width={500}
+          height={500}
+          alt="hero image"
+        />
+      </Grid>
+    </Grid> */
 }

@@ -22,14 +22,6 @@ export default function Home() {
       <main>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <Hero />
-          <Typography
-            variant="h3"
-            align="center"
-            margin="0.5rem"
-            sx={{ fontWeight: "bold" }}
-          >
-            Where would you like to go?
-          </Typography>
           <Filter />
           <Box maxHeight="200px">
             <WaveBackground
@@ -93,15 +85,6 @@ export default function Home() {
             />
           </Box>
           <CardWhyUs />
-          <Typography
-            variant="h4"
-            align="center"
-            mb="0.5rem"
-            fontWeight="bold"
-          >
-            Bus Schedules
-          </Typography>
-          <TableSchedule />
         </LocalizationProvider>
       </main>
       <FooterPage />

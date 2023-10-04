@@ -1,42 +1,59 @@
-import { Container, Grid, Paper } from "@mui/material";
+"use client";
+
+import { Container, Grid, Typography } from "@mui/material";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Paper
-      sx={{
-        height: {
-          xs: "50vh",
-          md: "70vh",
-        },
-        backgroundImage: "url(/img/hero-md.webp)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        opacity: "0.8",
-      }}
-    >
-      <Container maxWidth="md">
+    <Container>
+      <Grid
+        container
+        spacing={2}
+        alignItems="center"
+        mt={{
+          xs: "1rem",
+        }}
+      >
         <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            height: "100%",
-            width: "0 auto",
-            paddingTop: "4rem",
-          }}
+          item
+          xs={12}
+          md={6}
+          p={2}
+        >
+          <Typography
+            variant="h2"
+            component="h1"
+            align="center"
+          >
+            Where would you like to go?
+          </Typography>
+          <Typography
+            variant="body1"
+            paragraph
+            align="justify"
+            mt={2}
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
+            reprehenderit pariatur numquam officiis temporibus iusto, architecto
+            laboriosam, quibusdam natus quod in quasi animi qui accusamus saepe
+            perspiciatis ut distinctio illum! Minus, reiciendis? Voluptas vitae
+            temporibus voluptatem nihil pariatur dolor, dolores repellendus
+            ducimus odit eligendi beatae facilis maiores, harum, cum illo.
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
         >
           <img
-            style={{
-              alignSelf: "center",
-              width: "60%",
-              height: "100",
-            }}
-            src="/img/logo.png"
-            alt="logo"
+            src="/img/imageHero.jpg" // Asegúrate de que la ruta sea correcta
+            alt="Hero Image"
+            style={{ maxWidth: "100%", height: "auto" }}
           />
         </Grid>
-      </Container>
-    </Paper>
+      </Grid>
+    </Container>
   );
 };
 export default Hero;

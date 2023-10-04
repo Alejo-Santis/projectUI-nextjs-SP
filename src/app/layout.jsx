@@ -2,13 +2,13 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 
 import Navbar from "@/components/Navbar/Navbar";
-import FooterPage from "@/components/Footer/FooterPage";
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import InfoIcon from "@mui/icons-material/Info";
 import AirlineSeatReclineExtraIcon from "@mui/icons-material/AirlineSeatReclineExtra";
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
+import FooterPage from "@/components/Footer/FooterPage";
 
 export const metadata = {
   title: "Super Tours",

@@ -1,16 +1,10 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Icon,
-  Typography,
-} from "@mui/material";
+"use client";
+
+import { Card, CardContent, CardMedia, Icon, Typography } from "@mui/material";
 
 const CardService = ({ text, icon }) => {
   return (
     <Card
-      container
       elevation={6}
       sx={{
         display: "flex",

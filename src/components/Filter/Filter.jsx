@@ -4,13 +4,10 @@ import {
   Box,
   Button,
   Card,
-  CardContent,
   Grid,
   IconButton,
   Popover,
-  Stack,
   TextField,
-  Typography,
 } from "@mui/material";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import AddIcon from "@mui/icons-material/Add";
@@ -183,11 +180,6 @@ const Filter = () => {
           }}
         >
           <TextField
-            fullWidth={{
-              xs: true,
-              sm: true,
-              md: false,
-            }}
             label="¨Passengers"
             variant="outlined"
             value={`${adults} Adults, ${children} Children`}
