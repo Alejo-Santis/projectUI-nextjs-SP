@@ -14,8 +14,8 @@ const FooterPage = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#222", // Fondo oscuro
-        color: "white", // Texto blanco
+        backgroundColor: "#222",
+        color: "white",
         padding: "2rem",
         textAlign: "center",
       }}
@@ -37,11 +37,11 @@ const FooterPage = () => {
             display: "flex",
             flexGrow: 1,
             alignItems: "center",
-            gap: "1rem",
+            gap: "2rem",
           }}
           justifyContent={{
             xs: "center",
-            md: "flex-start",
+            md: "center",
           }}
           flexDirection={{
             xs: "column",
@@ -58,11 +58,13 @@ const FooterPage = () => {
           </Link>
           <Box>
             <Typography
-              variant="h6"
+              variant="subtitle1"
               display="flex"
-              alignItems="center"
-              justifyContent="center"
               gap="1rem"
+              sx={{
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <TagIcon />
               Follow Us
@@ -93,7 +95,34 @@ const FooterPage = () => {
             </IconButton>
           </Box>
         </Box>
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexGrow: 1,
+            alignItems: "center",
+            gap: "2rem",
+          }}
+          flexDirection={{
+            xs: "column",
+            md: "row",
+          }}
+        >
+          <Typography
+            variant="subtitle1"
+            display="flex"
+            sx={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            gap="1rem"
+            padding={1}
+            mr={2}
+          >
+            <ContactPhoneIcon />
+            Contact
+          </Typography>
+          <Typography fontSize={12}>Orlando (407) 370 3001</Typography>
+          <Typography fontSize={12}>Miami (305) 677 2676</Typography>
           <Typography
             variant="body1"
             sx={{
@@ -101,49 +130,24 @@ const FooterPage = () => {
               alignItems: "center",
               justifyContent: "center",
               gap: "1rem",
-              m: "1rem",
+              m: "0.5rem",
             }}
           >
-            <Box
-              sx={{
+            <a
+              href="mailto:reservations@supertours.com"
+              style={{
+                textDecoration: "none",
+                color: "#ccc",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                flexDirection: {
-                  xs: "column",
-                  sm: "row",
-                },
                 gap: "1rem",
+                fontSize: "12px",
               }}
             >
-              <Typography
-                variant="h6"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                gap="1rem"
-              >
-                <ContactPhoneIcon />
-                Contact
-              </Typography>
-              <Typography fontSize={12}>Orlando (407) 370 3001</Typography>
-              <Typography fontSize={12}>Miami (305) 677 2676</Typography>
-              <a
-                href="mailto:reservations@supertours.com"
-                style={{
-                  textDecoration: "none",
-                  color: "#ccc",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "1rem",
-                  fontSize: "12px",
-                }}
-              >
-                <AttachEmailIcon />
-                reservations@supertours.com
-              </a>
-            </Box>
+              <AttachEmailIcon />
+              reservations@supertours.com
+            </a>
           </Typography>
         </Box>
       </Box>

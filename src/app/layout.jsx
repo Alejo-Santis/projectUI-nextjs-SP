@@ -7,8 +7,7 @@ import LoginIcon from "@mui/icons-material/Login";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import InfoIcon from "@mui/icons-material/Info";
 import AirlineSeatReclineExtraIcon from "@mui/icons-material/AirlineSeatReclineExtra";
-import { Box, CssBaseline } from "@mui/material";
-import FooterPage from "@/components/Footer/FooterPage";
+import { CssBaseline } from "@mui/material";
 
 export const metadata = {
   title: "Super Tours",
@@ -60,7 +59,7 @@ export default function RootLayout({ children }) {
       />
       <body className={roboto.className}>
         <CssBaseline />
-        <Navbar arrayNavLinks={arrayNavLinks} />
+        {/* <Navbar arrayNavLinks={arrayNavLinks} /> */}
         {children}
       </body>
     </html>

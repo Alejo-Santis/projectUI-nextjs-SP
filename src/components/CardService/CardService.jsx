@@ -1,53 +1,120 @@
 "use client";
 
-import { Card, CardContent, CardMedia, Icon, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
 
-const CardService = ({ text, icon }) => {
+import RoomIcon from "@mui/icons-material/Room";
+import WifiIcon from "@mui/icons-material/Wifi";
+import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
+import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+
+const dataService = [
+  {
+    title: "GPS System",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis sequi rem, non animi atque cumque.",
+    icon: <RoomIcon />,
+  },
+  {
+    title: "WIFI Access",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis sequi rem, non animi atque cumque.",
+    icon: <WifiIcon />,
+  },
+  {
+    title: "Movies on Board",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis sequi rem, non animi atque cumque.",
+    icon: <LocalMoviesIcon />,
+  },
+  {
+    title: "Power Equipped",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis sequi rem, non animi atque cumque.",
+    icon: <ElectricalServicesIcon />,
+  },
+  {
+    title: "Air Conditioner",
+    body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis sequi rem, non animi atque cumque.",
+    icon: <AcUnitIcon />,
+  },
+];
+
+const CardService = () => {
   return (
-    <Card
-      elevation={6}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        mb: "1rem",
-        transition: "transform 0.2s",
-        "&:hover": {
-          transform: "scale(1.05)",
-          boxShadow: "0 3 0 0px rgba(0, 0, 0, 0.1)",
-        },
-      }}
+    <Container
+      maxWidth="md"
+      component="main"
     >
-      <CardMedia
-        sx={{
-          height: 50,
-          width: {
-            xs: 250,
-          },
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+      <Grid
+        container
+        spacing={5}
       >
-        <Icon>{icon}</Icon>
-      </CardMedia>
-      <CardContent>
-        <Typography
-          gutterBottom
-          align="center"
-          variant="h4"
-          sx={{
-            fontSize: {
-              xs: "1rem",
-              sm: "1rem",
-            },
-          }}
-        >
-          {text}
-        </Typography>
-      </CardContent>
-    </Card>
+        {dataService.map((service) => (
+          <Grid
+            item
+            key={service.title}
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card
+              display="flex"
+              sx={{
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                p={1}
+              >
+                {service.icon}
+              </Box>
+              <CardHeader
+                component="h2"
+                variant="h3"
+                title={service.title}
+                titleTypographyProps={{ align: "center" }}
+              />
+              <CardContent>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "baseline",
+                    mb: 2,
+                  }}
+                >
+                  <Typography
+                    variant="subtitle1"
+                    align="center"
+                  >
+                    {service.body}
+                  </Typography>
+                </Box>
+              </CardContent>
+              <CardActions>
+                <Button
+                  fullWidth
+                  variant="outlined"
+                >
+                  Learn More...
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 export default CardService;

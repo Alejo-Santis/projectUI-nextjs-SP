@@ -5,10 +5,8 @@ import {
   Button,
   Card,
   CardContent,
-  CardMedia,
   Dialog,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   IconButton,
   Typography,
@@ -59,10 +57,8 @@ const ButtonCheck = ({ row }) => {
               gap: 2,
             }}
           >
-            <Box>
-              <InfoIcon onClose={() => setIsOpen(false)} />
-              Details
-            </Box>
+            <InfoIcon onClose={() => setIsOpen(false)} />
+            Details
             <IconButton
               aria-label="close"
               onClick={() => setIsOpen(false)}

@@ -9,7 +9,9 @@ const Hero = () => {
       <Grid
         container
         spacing={2}
-        alignItems="center"
+        sx={{
+          alignItems: "center",
+        }}
         mt={{
           xs: "1rem",
         }}

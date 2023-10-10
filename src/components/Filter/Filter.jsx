@@ -90,8 +90,10 @@ const Filter = () => {
           sm={6}
           md={4}
           display="flex"
-          alignItems="center"
-          justifyContent="center"
+          sx={{
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           <TextField
             id="origin"
@@ -128,9 +130,11 @@ const Filter = () => {
           xs={12}
           sm={6}
           md={4}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
           flexDirection={{
             xs: "row",
             md: "row",
@@ -170,9 +174,11 @@ const Filter = () => {
           xs={12}
           sm={6}
           md={4}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
           gap={{
             xs: "0.2rem",
             sm: "0.3rem",
